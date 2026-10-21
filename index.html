@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra tu próxima laptop en TechStore.">
+  <title>TechStore | Tienda de laptops</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo" aria-label="TechStore, inicio">
+
+
+    </a>
+
+    <form class="search-form" id="search-form" role="search">
+      <label class="sr-only" for="search-input">
+        Buscar laptops
+      </label>
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Buscar laptops..."
+        autocomplete="off"
+      >
+      <button type="submit" class="search-button">
+        Buscar
+      </button>
+    </form>
+
+    <button
+      type="button"
+      class="cart-button"
+      id="cart-button"
+      aria-label="Ver carrito de compras"
+      aria-expanded="false"
+      aria-controls="cart-panel"
+    >
+      🛒 Carrito
+      <span id="cart-count" class="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">TECNOLOGÍA PARA TU DÍA A DÍA</span>
+        <h1>Encuentra tu próxima laptop.</h1>
+        <p>
+          Rendimiento, diseño y tecnología en un solo lugar.
+          Descubre el equipo ideal para ti.
+        </p>
+        <a href="#catalog" class="primary-link">
+          Explorar catálogo →
+        </a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+    
+        <span class="hero-symbol">✳</span>
+      </div>
+    </section>
+
+    <section class="catalog section-container" id="catalog">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">NUESTRA SELECCIÓN</span>
+          <h2>Laptops destacadas</h2>
+          <p>Encuentra el equipo perfecto para tus necesidades.</p>
+        </div>
+        <span id="product-count" class="product-count"></span>
+      </div>
+
+      <p id="status-message" class="status-message" role="status"
+         aria-live="polite">
+        Cargando laptops...
+      </p>
+
+      <div id="product-list" class="product-grid"></div>
+    </section>
+  </main>
+
+  <aside
+    id="cart-panel"
+    class="cart-panel"
+    aria-labelledby="cart-title"
+    aria-hidden="true"
+    inert
+  >
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">TU SELECCIÓN</span>
+        <h2 id="cart-title">Tu carrito</h2>
+      </div>
+      <button
+        type="button"
+        id="close-cart"
+        class="close-button"
+        aria-label="Cerrar carrito"
+      >✕</button>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+      <p class="empty-cart">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="cart-total">$ 0,00</strong>
+      </div>
+      <button type="button" id="clear-cart" class="clear-button">
+        Vaciar carrito
+      </button>
+      <button type="button" id="checkout-button" class="checkout-button">
+        Comprar
+      </button>
+      <p class="cart-note">Compra realizada.</p>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+</body>
+</html>
